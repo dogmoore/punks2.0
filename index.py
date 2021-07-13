@@ -19,10 +19,10 @@ activity = discord.Activity(name='with Max\'s head', type=discord.ActivityType.p
 client = Bot(command_prefix=PREFIX, help_command=None, activity=activity, intents=intents)
 
 
-@client.event
-async def on_ready():
-    print(f'{client.user} v{VERSION} has connected to Discord!')
-    print(f'(Pterodactyl Bot Online)')
+#@client.event
+#async def on_ready():
+#   print(f'{client.user} v{VERSION} has connected to Discord!')
+#    print(f'(Pterodactyl Bot Online)')
 
 dontLoad = []
 
