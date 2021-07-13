@@ -13,6 +13,13 @@ class Events(commands.Cog):
         self.client = client
 
     @commands.Cog.listener()
+    async def on_ready(self):
+        client = self.client
+
+        print(f'(Pterodactyl Bot Online)')
+        print(f'Username: {client.user.name}')
+        print(f'id: {client.user.id}')
+
     async def on_member_join(self, message):
         await message.channel.send('Welcome to this shitshow')
 

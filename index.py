@@ -1,6 +1,7 @@
 # bot.py
 import os
 import yaml
+import logging
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -21,6 +22,7 @@ client = Bot(command_prefix=PREFIX, help_command=None, activity=activity, intent
 @client.event
 async def on_ready():
     print(f'{client.user} v{VERSION} has connected to Discord!')
+    print(f'(Pterodactyl Bot Online)')
 
 dontLoad = []
 
@@ -35,4 +37,3 @@ if __name__ == '__main__':
                 print(f'{i[:-3]} cannot be loaded. [{error}]')
 
 client.run(TOKEN)
-
